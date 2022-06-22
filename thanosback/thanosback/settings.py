@@ -1,3 +1,8 @@
+
+
+
+
+
 """
 Django settings for thanosback project.
 
@@ -25,7 +30,7 @@ SECRET_KEY = 'django-insecure-b0w5luy1+dk3e_2jw5di9!6(iu7x1um)ceeyw_f&!*)84*5+u2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -121,3 +126,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = os.path.join(BASE_DIR, ‘static’)
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
+# Activate Django-Heroku.
+django_heroku.settings(locals())
